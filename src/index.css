@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* Custom Orion Constellation Star Cursor */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #060913;
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cline x1='12' y1='1' x2='12' y2='23' stroke='rgba(56,189,248,0.5)' stroke-width='0.8' stroke-dasharray='2,2'/%3E%3Cline x1='1' y1='12' x2='23' y2='12' stroke='rgba(56,189,248,0.5)' stroke-width='0.8' stroke-dasharray='2,2'/%3E%3Ccircle cx='12' cy='12' r='6' stroke='rgba(56,189,248,0.35)' stroke-width='0.7' fill='none'/%3E%3Cpolygon points='12,2 14.2,9.8 22,12 14.2,14.2 12,22 9.8,14.2 2,12 9.8,9.8' fill='%2338bdf8'/%3E%3Cpolygon points='12,6 13.2,10.8 18,12 13.2,13.2 12,18 10.8,13.2 6,12 10.8,10.8' fill='%23ffffff'/%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%23ffffff'/%3E%3C/svg%3E") 12 12, auto;
+}
+
+/* Constellation Pointer for Clickable Elements */
+button, a, [role="button"], input[type="submit"], input[type="button"], select, .cursor-pointer {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle cx='13' cy='13' r='10' stroke='%2306b6d4' stroke-width='1' stroke-dasharray='3,2' fill='none'/%3E%3Cpolygon points='13,1 15.8,9.5 24,13 15.8,16.5 13,25 10.2,16.5 2,13 10.2,9.5' fill='%2306b6d4'/%3E%3Cpolygon points='13,5 14.5,11 20,13 14.5,15 13,21 11.5,15 6,13 11.5,11' fill='%23ffffff'/%3E%3Ccircle cx='13' cy='13' r='2' fill='%23ffffff'/%3E%3C/svg%3E") 13 13, pointer !important;
+}
+
+/* Constellation Caret for Text Inputs */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cline x1='12' y1='2' x2='12' y2='22' stroke='%2338bdf8' stroke-width='1.5'/%3E%3Cline x1='8' y1='2' x2='16' y2='2' stroke='%2338bdf8' stroke-width='1.5'/%3E%3Cline x1='8' y1='22' x2='16' y2='22' stroke='%2338bdf8' stroke-width='1.5'/%3E%3Cpolygon points='12,7 13.5,12 12,17 10.5,12' fill='%23ffffff'/%3E%3C/svg%3E") 12 12, text !important;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Star glow and constellation lines */
+@keyframes starPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.15); }
+}
+
+.animate-star-pulse {
+  animation: starPulse 4s ease-in-out infinite;
+}
+
+@keyframes cosmicDrift {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-cosmic-drift {
+  animation: cosmicDrift 8s ease-in-out infinite;
+}

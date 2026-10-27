@@ -1,0 +1,6 @@
+{
+  "name": "ORION — A Multidisciplinary Club",
+  "description": "Official website for ORION — A Multidisciplinary Club. Earned, Not Favored! Featuring three access portals, living spiral galaxy constellations, member portal, role-based committee management, and dedicated discipline platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
